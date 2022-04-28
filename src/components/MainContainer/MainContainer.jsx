@@ -1,5 +1,5 @@
-import Nav from "./Nav";
-import About from './About'
+import Nav from "../Nav";
+import About from '../../pages/About'
 
 const MainContainer = () => {
   return(

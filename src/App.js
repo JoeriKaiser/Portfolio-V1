@@ -1,20 +1,23 @@
-import React from 'react';  
+import React from 'react';
 import './App.css';
-import MainContainer from './components/MainContainer';
-import MainPage from './components/MainPage';
-import { useState } from 'react';
+// import MainContainer from './components/MainContainer';
+import MainPage from './pages/MainPage';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const [state, setState] = useState(true);
-  function handleArrowButton() {
-    setState(false)
-  }
   return (
-    <div>
-      {state ? <MainPage onClick1={handleArrowButton} /> : <MainContainer />}
-    </div>
-    
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<MainPage />}></Route>
+        <Route path='/about' element={<About />}></Route>
+        <Route path='/projects' element={<Projects />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;

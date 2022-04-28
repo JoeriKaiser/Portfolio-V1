@@ -1,0 +1,12 @@
+nav {
+  margin: var(--spacing-16px);
+  padding: 0;
+  justify-content: space-around;
+  display: flex;
+}
+nav a {
+  font-size: 22px;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
