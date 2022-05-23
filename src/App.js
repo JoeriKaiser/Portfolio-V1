@@ -1,23 +1,33 @@
 import React from 'react';
 import './App.css';
-// import MainContainer from './components/MainContainer';
 import MainPage from './pages/MainPage';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation, Link } from 'react-router-dom';
+import MainContainer from './components/MainContainer/MainContainer';
 
-function App() {
+function App({ key }) {
+  const location = useLocation();
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<MainPage />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/projects' element={<Projects />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <div className='App'>
+        <Routes location={location} key={location.key}>
+          <Route path='/' element={<MainPage />}></Route>
+        <Route path='/main-page/*' element={<MainContainer />}></Route> 
+        <Route path='/main-page/contact/linkedin' element={(<Linkedin />)}></Route> 
+        <Route path='/main-page/contact/github' element={(<Github />)}></Route> 
+        </Routes>
+    </div>
   );
+}
+
+function Linkedin() {
+  // eslint-disable-next-line no-lone-blocks
+  {window.location.replace('https://www.linkedin.com/in/joeri-kaiser-1348881b2/')}
+  return null
+}
+
+function Github() {
+  // eslint-disable-next-line no-lone-blocks
+  {window.location.replace('https://github.com/JoeriKaiser')}
+  return null
 }
 
 export default App;

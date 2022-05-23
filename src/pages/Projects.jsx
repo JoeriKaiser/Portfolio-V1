@@ -1,14 +1,15 @@
 import Nav from '../components/Nav/Nav';
 import React from 'react';
 import ProjectItem from '../components/ProjectItem/ProjectItem';
+import happywastes from '../img/thumbnails/happwastes.png';
 
 function Projects() {
   const [projectList, setProjectList] = React.useState([
     {
-      name: 'Missive Immersive',
-      url: 'https://lea-stauder.art/',
-      placeholder: 'img',
-      className: 'missive-immersive',
+      name: 'Happy Wastes',
+      url: 'https://p3-2109-happywastes-front.toulouse-1.wilders.dev/',
+      placeholder: { happywastes },
+      className: 'happy-wastes',
     },
     {
       name: 'Missive Immersive',
@@ -17,15 +18,14 @@ function Projects() {
       className: 'missive-immersive',
     },
     {
-      name: 'Missive Immersive',
-      url: 'https://lea-stauder.art/',
+      name: 'This Portfolio',
+      url: 'localhost:3000',
       placeholder: 'img',
-      className: 'missive-immersive',
+      className: 'portfolio',
     },
   ]);
   return (
     <div>
-      <Nav></Nav>
       <div className='projects-container'>
         {projectList.map((item, index) => (
           <ProjectItem key={index} {...item} />

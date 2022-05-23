@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import DevIcons from '../components/DevIcons/DevIcons';
 import Nav from '../components/Nav/Nav';
 
@@ -56,25 +57,22 @@ function About() {
   ]);
 
   return (
-    <div>
-      <Nav />
-      <div className='about-container'>
-        <h1>My name is Joeri</h1>
-        <p>
-          I am an aspiring full-stack web developer currently in a React
-          bootcamp with the will to be the best I can be with my current
-          experience and my great attention to details.
-        </p>
-        <p>
-          My goal is to find a challenge in order to improve more in this field
-          that I am passionate about.
-        </p>
-        <p>My favortie technologies are :</p>
-        <div className='icon-container'>
-          {iconList.map((item, index) => (
-            <DevIcons key={index} {...item} />
-          ))}
-        </div>
+    <div className='about-container'>
+      <h1>My name is Joeri</h1>
+      <p>
+        I am an aspiring full-stack web developer currently in a React bootcamp
+        with the will to be the best I can be with my current experience and my
+        great attention to details.
+      </p>
+      <p>
+        My goal is to find a challenge in order to improve more in this field
+        that I am passionate about.
+      </p>
+      <p>My favortie technologies are :</p>
+      <div className='icon-container'>
+        {iconList.map((item, index) => (
+          <DevIcons key={index} {...item} />
+        ))}
       </div>
     </div>
   );

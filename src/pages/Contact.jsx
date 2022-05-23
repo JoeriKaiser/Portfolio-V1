@@ -1,22 +1,38 @@
 import React from 'react';
-import Nav from '../components/Nav/Nav';
 import linkedin from '../img/icons/linkedin.png';
 import github from '../img/icons/github.png';
-import email from '../img/icons/email.png';
-import instagram from '../img/icons/instagram.png';
 import linkvector from '../img/icons/Vector.png';
+import { Link } from 'react-router-dom';
+
+import emailIcon from '../img/icons/email.png';
+
+function Mailto({ email, subject, body, ...props }) {
+  return (
+    <a href={`mailto:${email}?subject=${subject || ''}&body=${body || ''}`}>
+      {props.children}
+    </a>
+  );
+}
 
 function Contact() {
   return (
     <div>
-      <Nav />
       <div className='contact-container'>
         <p>Get in touch with me on socials!</p>
         <div className='contact-socials-container'>
-          <img src={linkedin} alt='Linkedin' />
-          <img src={email} alt='Email' />
-          <img src={github} alt='Github' />
-          <img src={instagram} alt='Instagram' />
+          <Link to='linkedin'>
+            <img src={linkedin} alt='Linkedin' />
+          </Link>
+          <Mailto
+            email='joeri.kaiser@hotmail.com'
+            subject='Contact from personal site'
+            body='Hi'
+          >
+            <img src={emailIcon} alt='email' />
+          </Mailto>
+          <Link to={'github'}>
+            <img src={github} alt='Github' />
+          </Link>
         </div>
       </div>
       <div className='contact-under-container'>
