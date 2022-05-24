@@ -18,6 +18,12 @@ function Projects() {
       className: 'missive-immersive',
     },
     {
+      name: `Chou'pets`,
+      url: 'localhost:3000',
+      placeholder: 'img',
+      className: 'choupets',
+    },
+    {
       name: 'This Portfolio',
       url: 'localhost:3000',
       placeholder: 'img',

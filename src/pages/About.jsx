@@ -19,19 +19,19 @@ function About() {
       name: 'React',
       className: 'devicon-react-original-wordmark',
     },
-    {
-      name: 'VueJS',
-      className: 'devicon-vuejs-plain-wordmark',
-    },
+    // {
+    //   name: 'VueJS',
+    //   className: 'devicon-vuejs-plain-wordmark',
+    // },
     {
       name: 'NodeJS',
       className: 'devicon-nodejs-plain-wordmark',
     },
 
-    {
-      name: 'MongoDB',
-      className: 'devicon-mongodb-plain-wordmark',
-    },
+    // {
+    //   name: 'MongoDB',
+    //   className: 'devicon-mongodb-plain-wordmark',
+    // },
     {
       name: 'MySQL',
       className: 'devicon-mysql-plain-wordmark',
@@ -40,10 +40,10 @@ function About() {
       name: 'Firebase',
       className: 'devicon-firebase-plain-wordmark',
     },
-    {
-      name: 'GraphQL',
-      className: 'devicon-graphql-plain-wordmark',
-    },
+    // {
+    //   name: 'GraphQL',
+    //   className: 'devicon-graphql-plain-wordmark',
+    // },
     {
       name: 'Next.js',
       className: 'devicon-nextjs-original-wordmark',
