@@ -25,7 +25,7 @@ function Projects() {
     },
     {
       name: 'This Portfolio',
-      url: 'localhost:3000',
+      url: 'https://www.linkedin.com/feed/update/urn:li:activity:6931197252598157312/',
       placeholder: 'img',
       className: 'portfolio',
     },
