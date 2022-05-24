@@ -1,7 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import DevIcons from '../components/DevIcons/DevIcons';
-import Nav from '../components/Nav/Nav';
 
 function About() {
   const [iconList, setIconList] = React.useState([

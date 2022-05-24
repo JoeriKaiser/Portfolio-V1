@@ -1,9 +1,6 @@
 import React from 'react';
 
 function ProjectItem(props) {
-  {
-    console.log(props.className);
-  }
   return (
     <div className='project'>
       <div className={`project-heading ${props.className}`}></div>

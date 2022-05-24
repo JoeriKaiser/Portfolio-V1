@@ -3,6 +3,7 @@ import linkedin from '../img/icons/linkedin.png';
 import github from '../img/icons/github.png';
 import linkvector from '../img/icons/Vector.png';
 import { Link } from 'react-router-dom';
+import pdf from '../../src/img/documents/jk_resume.pdf';
 
 import emailIcon from '../img/icons/email.png';
 
@@ -38,7 +39,9 @@ function Contact() {
       <div className='contact-under-container'>
         <p>I am currently looking for a job, feel free to send me a message.</p>
         <p>Or have a look at my resume</p>
-        <img src={linkvector} alt='Link to resume' />
+        <a href={pdf}>
+          <img src={linkvector} alt='Link to resume' />
+        </a>
       </div>
     </div>
   );
