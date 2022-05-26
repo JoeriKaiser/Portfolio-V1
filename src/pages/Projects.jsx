@@ -19,13 +19,13 @@ function Projects() {
     },
     {
       name: `Chou'pets`,
-      url: 'localhost:3000',
+      url: 'https://www.linkedin.com/feed/update/urn:li:activity:6931197252598157312/',
       placeholder: 'img',
       className: 'choupets',
     },
     {
       name: 'This Portfolio',
-      url: 'https://www.linkedin.com/feed/update/urn:li:activity:6931197252598157312/',
+      url: 'https://www.joerikaiser.dev/',
       placeholder: 'img',
       className: 'portfolio',
     },
