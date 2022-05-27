@@ -18,6 +18,12 @@ function Projects() {
       className: 'missive-immersive',
     },
     {
+      name: 'EmerGa Urgence (À venir) ',
+      url: '',
+      placeholder: 'img',
+      className: 'emerga',
+    },
+    {
       name: `Chou'pets`,
       url: 'https://www.linkedin.com/feed/update/urn:li:activity:6931197252598157312/',
       placeholder: 'img',
