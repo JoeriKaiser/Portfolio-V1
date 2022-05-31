@@ -4,7 +4,7 @@ import DevIcons from '../components/DevIcons/DevIcons';
 import variants from '../context/main-variants';
 
 function About() {
-  const [iconList, setIconList] = React.useState([
+  const iconList = [
     {
       name: 'Javascript',
       className: 'devicon-javascript-plain',
@@ -54,7 +54,7 @@ function About() {
       name: 'Git',
       className: 'devicon-git-plain-wordmark',
     },
-  ]);
+  ];
 
   return (
     <motion.div

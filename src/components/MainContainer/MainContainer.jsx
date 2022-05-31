@@ -3,7 +3,6 @@ import About from '../../pages/About';
 import { Route, Routes } from 'react-router-dom';
 import Projects from '../../pages/Projects';
 import Contact from '../../pages/Contact';
-import { motion, AnimatePresence } from 'framer-motion';
 import { GlobalContext } from '../../context/GlobalContext';
 import { useContext } from 'react';
 

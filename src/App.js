@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import MainPage from './pages/MainPage';
-import { Route, Routes, useLocation, Link } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import MainContainer from './components/MainContainer/MainContainer';
 import { AnimatePresence } from 'framer-motion';
 

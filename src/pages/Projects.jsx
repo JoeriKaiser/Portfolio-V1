@@ -1,6 +1,5 @@
 import React from 'react';
 import ProjectItem from '../components/ProjectItem/ProjectItem';
-import happywastes from '../img/thumbnails/happwastes.png';
 import hp from '../img/thumbnails/happwastes.png';
 import mi from '../img/thumbnails/missivescaled.png';
 import em from '../img/thumbnails/emerga.png';
