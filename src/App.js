@@ -3,17 +3,20 @@ import './App.css';
 import MainPage from './pages/MainPage';
 import { Route, Routes, useLocation, Link } from 'react-router-dom';
 import MainContainer from './components/MainContainer/MainContainer';
+import { AnimatePresence } from 'framer-motion';
 
 function App({ key }) {
   const location = useLocation();
   return (
     <div className='App'>
-        <Routes location={location} key={location.key}>
-          <Route path='/' element={<MainPage />}></Route>
-        <Route path='/main-page/*' element={<MainContainer />}></Route> 
-        <Route path='/main-page/contact/linkedin' element={(<Linkedin />)}></Route> 
-        <Route path='/main-page/contact/github' element={(<Github />)}></Route> 
-        </Routes>
+        <AnimatePresence exitBeforeEnter>
+          <Routes location={location} key={location.key}>
+            <Route path='/' element={<MainPage />}></Route>
+          <Route path='/main-page/*' element={<MainContainer />}></Route>
+          <Route path='/main-page/contact/linkedin' element={(<Linkedin />)}></Route>
+          <Route path='/main-page/contact/github' element={(<Github />)}></Route>
+          </Routes>
+        </AnimatePresence>
     </div>
   );
 }

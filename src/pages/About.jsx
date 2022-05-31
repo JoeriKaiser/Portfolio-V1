@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import DevIcons from '../components/DevIcons/DevIcons';
+import variants from '../context/main-variants';
 
 function About() {
   const [iconList, setIconList] = React.useState([
@@ -55,7 +57,13 @@ function About() {
   ]);
 
   return (
-    <div className='about-container'>
+    <motion.div
+      variants={variants}
+      initial='enter'
+      animate='center'
+      transition={{ delay: 0.1 }}
+      className='about-container'
+    >
       <h1>My name is Joeri</h1>
       <p>
         I am an aspiring full-stack web developer currently in a React bootcamp
@@ -72,7 +80,7 @@ function About() {
           <DevIcons key={index} {...item} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

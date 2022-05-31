@@ -10,15 +10,39 @@ export const Nav = () => {
     <AnimatePresence>
       <motion.div>
         <nav>
-          <Link id={navSpecs[0].id} to={navSpecs[0].link}>
-            {navSpecs[0].name}
-          </Link>
-          <Link id={navSpecs[1].id} to={navSpecs[1].link}>
-            {navSpecs[1].name}
-          </Link>
-          <Link id={navSpecs[2].id} to={`${navSpecs[2].link}`}>
-            {navSpecs[2].name}
-          </Link>
+          <motion.div whileHover={{ y: 4 }}>
+            <Link id={navSpecs[0].id} to={navSpecs[0].link}>
+              <motion.a
+                whileHover={{
+                  textShadow: '2px 2px 12px rgba(228,228,228,0.2)',
+                }}
+              >
+                {navSpecs[0].name}
+              </motion.a>
+            </Link>
+          </motion.div>
+          <motion.div whileHover={{ y: 4 }}>
+            <Link id={navSpecs[1].id} to={navSpecs[1].link}>
+              <motion.a
+                whileHover={{
+                  textShadow: '2px 2px 12px rgba(228,228,228,0.2)',
+                }}
+              >
+                {navSpecs[1].name}
+              </motion.a>
+            </Link>
+          </motion.div>
+          <motion.div whileHover={{ y: 4 }}>
+            <Link id={navSpecs[2].id} to={`${navSpecs[2].link}`}>
+              <motion.a
+                whileHover={{
+                  textShadow: '2px 2px 12px rgba(228,228,228,0.2)',
+                }}
+              >
+                {navSpecs[2].name}
+              </motion.a>
+            </Link>
+          </motion.div>
         </nav>
       </motion.div>
     </AnimatePresence>

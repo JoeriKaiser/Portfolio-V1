@@ -12,11 +12,21 @@
   --font-size-32px: 2rem;
 }
 
+* {
+  list-style: circle;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   color: var(--accent-color);
   background-size: cover;
   width: 100vw;
-  height: 40vh;
+  height: 100%;
   background-image: url('../src/img/img/topography1.svg');
   background-color: #155259;
 }
@@ -37,7 +47,18 @@ body {
   height: 180px;
 }
 
+.main-image-container {
+  display: grid;
+  place-items: center;
+}
+
+.main-image-circle {
+  filter: invert(1);
+  background-image: url(../src/img/img/abstract-circle.svg);
+}
+
 .main-image {
+  filter: invert(1);
   padding: var(--spacing-32px);
   display: flex;
   justify-content: center;
@@ -181,6 +202,11 @@ nav a {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 i,
 p,
 h1 {
@@ -191,12 +217,57 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 350px;
-  height: 260px;
-  border: 2px solid white;
+  width: 70%;
 }
+
+.project-detail-container {
+  border-radius: 10px;
+  display: flex;
+  height: 100%;
+}
+
 .project-heading {
-  height: 260px;
+  height: 100%;
+}
+
+.project-description {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  color: black;
+  background-color: #fffcf1;
+  border-left: 0;
+  text-shadow: none;
+}
+
+.project-description p {
+  text-align: center;
+  padding: 1rem;
+  padding-top: 0;
+  text-shadow: none;
+}
+.project-description h3 {
+  text-align: center;
+}
+
+#description-tech {
+  padding: 0;
+  font-weight: 900;
+}
+
+#description-list {
+  margin-left: 1rem;
+  text-align: left;
+}
+
+hr.rounded {
+  margin: 0 auto;
+  opacity: 50%;
+  width: 70%;
+  border-top: 4px solid Black;
+  border-radius: 5px;
 }
 
 .project-listing {
@@ -225,31 +296,105 @@ p {
   text-shadow: none;
 }
 
-@media screen and (min-width: 1000px) {
+.header {
+  display: grid;
+  justify-items: center;
+  place-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .projects-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .project-description {
+    position: relative;
+    min-height: 60%;
+    margin-bottom: 5rem;
+  }
+  hr.rounded {
+    display: none;
+  }
+  a.project-link {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .project {
+    width: 300px;
+    height: 200px;
+  }
+
+  .projects-container a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-detail-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+
+  .project-detail-container img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    float: left;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .project-heading {
+    width: 100%;
+    flex: 1;
+  }
+
+  .project-description {
+    display: block;
+    width: 300px;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  .projects-container a {
+    width: 100%;
   }
 
   .project-listing {
     font-size: 12px;
   }
 
-  .project-heading {
-    height: 600px;
+  .project-description {
+    width: 700px;
   }
 
-  .header {
-    display: grid;
-    justify-items: center;
-    place-items: center;
-    justify-content: center;
-    align-content: center;
+  .project-detail-container img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
   }
 
   .main-container {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -299,10 +444,19 @@ p {
   }
 }
 
-/* thumbnails */
+a.project-link {
+  bottom: 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #000000;
+}
+
+.project {
+  width: 100%;
+}
 
 .project-heading {
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .happy-wastes {
