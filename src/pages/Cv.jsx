@@ -26,12 +26,12 @@ const Cv = () => {
       </div>
       {currentPDF === pdf1 && (
         <Document renderMode='canvas' style={currentPDF === pdf1 && {display: 'hidden'}} onDocumentLoadSuccess={onDocumentLoadSuccess} onError={onError} file={currentPDF}>
-          <Page renderTextLayer={false} canvasBackground='transparent' pageNumber={numPages} />
+          <Page scale={0.9} renderTextLayer={false} canvasBackground='transparent' pageNumber={numPages} />
         </Document> 
       )}
       {currentPDF === pdf2 && (
         <Document style={currentPDF === pdf2 && {display: 'hidden'}} onDocumentLoadSuccess={onDocumentLoadSuccess} onError={onError} file={currentPDF}>
-        <Page renderTextLayer={false} canvasBackground='transparent'pageNumber={numPages} />
+        <Page scale={0.9} renderTextLayer={false} canvasBackground='transparent'pageNumber={numPages} />
         </Document> 
       )}
     </div>
