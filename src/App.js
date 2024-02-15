@@ -4,6 +4,7 @@ import MainPage from './pages/MainPage';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import MainContainer from './components/MainContainer/MainContainer';
 import { AnimatePresence } from 'framer-motion';
+import Cv from './pages/Cv';
 
 function App({ key }) {
   const location = useLocation();
@@ -15,6 +16,7 @@ function App({ key }) {
           <Route path='/main-page/*' element={<MainContainer />}></Route>
           <Route path='/main-page/contact/linkedin' element={(<Linkedin />)}></Route>
           <Route path='/main-page/contact/github' element={(<Github />)}></Route>
+          <Route path='/main-page/cv' element={(<Cv />)}></Route>
           </Routes>
         </AnimatePresence>
     </div>
