@@ -17,10 +17,10 @@ const Cv = () => {
   return (
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
       <div style={{width: '100%', height: '100px', display: 'flex', justifyContent: 'center', gap: '100px', flexDirection: 'row'}}>
-        <div style={{width: 100, height: 'auto', fontSize: '4rem'}} onClick={() => setCurrentPDF(pdf1)}>
+        <div style={{width: 100, height: 'auto', fontSize: '4rem', cursor: 'pointer'}} onClick={() => setCurrentPDF(pdf1)}>
           🇫🇷
         </div>
-        <div style={{width: 100, height: 'auto', fontSize: '4rem'}} onClick={() => setCurrentPDF(pdf2)}>
+        <div style={{width: 100, height: 'auto', fontSize: '4rem', cursor: 'pointer'}} onClick={() => setCurrentPDF(pdf2)}>
           🇬🇧
         </div>
       </div>
