@@ -25,15 +25,15 @@ const Cv = () => {
         </div>
       </div>
       {currentPDF === pdf1 && (
-        <Document style={currentPDF === pdf1 && {display: 'hidden'}} onDocumentLoadSuccess={onDocumentLoadSuccess} onError={onError} file={currentPDF}>
-        <Page renderTextLayer={false} renderAnnotationLayer={false} canvasBackground='transparent' height={800} pageNumber={numPages} />
-      </Document> 
-        )}
+        <Document renderMode='canvas' style={currentPDF === pdf1 && {display: 'hidden'}} onDocumentLoadSuccess={onDocumentLoadSuccess} onError={onError} file={currentPDF}>
+          <Page renderTextLayer={false} canvasBackground='transparent' pageNumber={numPages} />
+        </Document> 
+      )}
       {currentPDF === pdf2 && (
         <Document style={currentPDF === pdf2 && {display: 'hidden'}} onDocumentLoadSuccess={onDocumentLoadSuccess} onError={onError} file={currentPDF}>
-        <Page renderTextLayer={false} renderAnnotationLayer={false} canvasBackground='transparent' height={800} pageNumber={numPages} />
-      </Document> 
-        )}
+        <Page renderTextLayer={false} canvasBackground='transparent'pageNumber={numPages} />
+        </Document> 
+      )}
     </div>
   );
 }
